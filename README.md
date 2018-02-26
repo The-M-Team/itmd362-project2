@@ -23,4 +23,4 @@ We will be building a movie ticket booking system. Where users can choose a spec
 - Group: https://github.com/The-M-Team/itmd362-project2
 - Mohammed Wasfi: https://github.com/MohammedWasfi/itmd362-project2
 - Mohmedamir Arther: https://github.com/marther1/itmd362-project2
--Mufid bhavnagri: https://github.com/mbhavnag/itmd362-project2
+- Mufid bhavnagri: https://github.com/mbhavnag/itmd362-project2
