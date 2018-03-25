@@ -7,7 +7,7 @@
 $('html').removeClass('no-js').addClass('js');
 
 // Run toggledNavigation function on load and resize events:
-$(document).ready(toggledNavigation());
+/*$(document).ready(toggledNavigation());
 $(window).on('resize', toggledNavigation());
 
 function toggledNavigation() {
@@ -36,4 +36,4 @@ function responsiveFeature(feature) {
     has_feature = false;
   }
   return has_feature;
-}
+}*/

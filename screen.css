@@ -179,6 +179,8 @@ html {
   font-size: 1.125em; /* 18 / 16 = 1.125 */
   line-height: 1.222em; /* 22 / 18 = 1.2222222222 */
   text-rendering: optimizeLegibility;
+  background-color: black;
+  color: white;
 
 }
 
@@ -216,9 +218,6 @@ img {
   padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
 }
 
-#location {
-  padding-top: 20em; 
-}
 #navigation {
   position: absolute;
   width: 100%;
@@ -246,26 +245,37 @@ img {
 #navigation a:hover {
   background-color: purple;
 }
-.js img {
+
+footer {
+  padding-top: 2.3157894737em;
+}
+
+/*.js img {
   cursor: pointer;
 }
+
 .js body {
-  padding-top: 3.667em; /* 66 / 18 = 3.667... */
+  padding-top: 3.667em;
 }
+
 .js body:after {
   content: "expanded-nav";
   display: none;
 }
+
 .js body.is-showing-expanded-nav {
-  padding-top: 30em; /* 286px / 18px = 15.88... */
+  padding-top: 30em;  286px / 18px = 15.88...
 }
+
 .js #menu {
   line-height: inherit;
   padding-bottom: 0;
 }
+
 .js #navigation ul {
   display: none;
 }
+
 .js #navigation ul.is-visible {
   display: block;
-}
+} */
