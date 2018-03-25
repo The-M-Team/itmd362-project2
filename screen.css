@@ -246,8 +246,17 @@ img {
   background-color: purple;
 }
 
-footer {
-  padding-top: 2.3157894737em;
+#footer {
+  padding-top: 5%;
+}
+
+#slideshow {
+  margin: auto;
+  position: relative;
+
+}
+.slide {
+  position: absolute;
 }
 
 /*.js img {
