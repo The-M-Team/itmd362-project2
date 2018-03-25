@@ -215,3 +215,32 @@ img {
   padding-top: 0.611em; /* 11 / 18 = 0.6111111 */
   padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
 }
+
+
+#navigation {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#navigation li {
+  float: left;
+  width: 33.3333333333%;
+}
+
+#navigation a {
+  display: block;
+  width: 100%;
+  padding-top: 0.611em; /* 11 / 18 = 0.6111111 */
+  padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
+  text-align: center;
+  text-decoration: none;
+  background-color: teal;
+  color: honeydew;
+
+}
+
+#navigation a:hover {
+  background-color: purple;
+}
