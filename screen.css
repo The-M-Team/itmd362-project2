@@ -216,7 +216,9 @@ img {
   padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
 }
 
-
+#location {
+  padding-top: 20em; 
+}
 #navigation {
   position: absolute;
   width: 100%;
