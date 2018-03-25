@@ -218,6 +218,26 @@ img {
   padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
 }
 
+#home,
+#theaters {
+  position: relative;
+  color: white;
+  background: url(images/theater.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#description {
+  text-align: center;
+}
+
+#footer {
+  padding-top: 3.667em; /* 66 / 18 = 3.667... */
+  padding-bottom: 0.516em; /* 22 / 42.635 = 0.516 */
+}
+
 #navigation {
   position: absolute;
   width: 100%;
