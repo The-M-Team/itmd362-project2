@@ -38,6 +38,28 @@ $.noConflict();
     };
   }());
   slideshow.startSlideshow();
+
+  $('#zip').on('keyup', function(e) {
+  // On a keyup event, ...
+  var zip = $(this).val();
+  if (zip.length === 5) {
+    $('label b').remove();
+    $.ajax({
+      url: 'http://api.zippopotam.us/us/' + zip,
+      statusCode: {
+        200: function(data) {
+          $('#city').val(data.places[0]["place name"]);
+          $('#state').val(data.places[0]["state abbreviation"]);
+        },
+        404: function() {
+          $('label[for="zip"]').append(' <b>Please enter a valid zip code</b>');
+        }
+      }
+    }
+    );
+  }
+});
+
 })(jQuery);
 
 // Run toggledNavigation function on load and resize events:
