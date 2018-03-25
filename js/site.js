@@ -39,6 +39,10 @@ $.noConflict();
   }());
   slideshow.startSlideshow();
 
+  $('#inputs li').on('click', function() {
+    $(this).find('input').focus();
+  });
+
   $('#zip').on('keyup', function(e) {
   // On a keyup event, ...
   var zip = $(this).val();
