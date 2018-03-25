@@ -5,4 +5,35 @@
 /* eslint-enable */
 
 $('html').removeClass('no-js').addClass('js');
-$.noConflict();
+
+// Run toggledNavigation function on load and resize events:
+$(document).ready(toggledNavigation());
+$(window).on('resize', toggledNavigation());
+
+function toggledNavigation() {
+  if(responsiveFeature('expanded-nav')) {
+    if($('#navigation img').length === 0) {
+      $('#navigation').prepend('<img id="menu"src ="../images/menu.png" />');
+      $('#navigation #menu').on('click', function(e) {
+        $('#navigation ul').toggleClass('is-visible');
+        $('body').toggleClass('is-showing-expanded-nav');
+        e.preventDefault();
+      });
+    }
+  } else {
+    $('#navigation img').remove();
+    $('#navigation ul').removeClass('is-visible');
+    $('body').removeClass('is-showing-expanded-nav');
+  }
+}
+
+function responsiveFeature(feature) {
+  var size = window
+    .getComputedStyle(document.body, ':after')
+    .getPropertyValue('content');
+  var has_feature = true;
+  if(size.indexOf(feature) === -1) {
+    has_feature = false;
+  }
+  return has_feature;
+}

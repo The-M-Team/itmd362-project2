@@ -216,7 +216,9 @@ img {
   padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
 }
 
-
+#location {
+  padding-top: 20em; 
+}
 #navigation {
   position: absolute;
   width: 100%;
@@ -243,4 +245,27 @@ img {
 
 #navigation a:hover {
   background-color: purple;
+}
+.js img {
+  cursor: pointer;
+}
+.js body {
+  padding-top: 3.667em; /* 66 / 18 = 3.667... */
+}
+.js body:after {
+  content: "expanded-nav";
+  display: none;
+}
+.js body.is-showing-expanded-nav {
+  padding-top: 30em; /* 286px / 18px = 15.88... */
+}
+.js #menu {
+  line-height: inherit;
+  padding-bottom: 0;
+}
+.js #navigation ul {
+  display: none;
+}
+.js #navigation ul.is-visible {
+  display: block;
 }
