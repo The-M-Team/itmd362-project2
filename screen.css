@@ -179,6 +179,8 @@ html {
   font-size: 1.125em; /* 18 / 16 = 1.125 */
   line-height: 1.222em; /* 22 / 18 = 1.2222222222 */
   text-rendering: optimizeLegibility;
+  background-color: black;
+  color: white;
 
 }
 
@@ -216,9 +218,6 @@ img {
   padding-bottom: 0.611em; /* 11 / 18 = 0.6111111 */
 }
 
-#location {
-  padding-top: 20em; 
-}
 #navigation {
   position: absolute;
   width: 100%;
@@ -246,26 +245,118 @@ img {
 #navigation a:hover {
   background-color: purple;
 }
-.js img {
+
+#footer {
+  padding-top: 5%;
+}
+
+#slideshow {
+  margin: auto;
+  position: relative;
+
+}
+
+.slide {
+  position: absolute;
+}
+
+label,
+input {
+  display: block;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+label {
+  height: 1.222em; /* 22 / 18 = 1.222em */
+}
+
+input {
+  box-sizing: border-box;
+  border: 0;
+  line-height: 1;
+  padding: 0.722em 0; /* 13 / 18 = 0.722 */
+  height: 2.444em; /* 44 / 18 = 2.444 */
+  background: inherit;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background: #CCC;
+  padding: 0.611em; /* 11 / 18 = 0.6111; (22 - 13) = 9 / 18 = 0.5 */
+  border-radius: 0.2em;
+  float: right;
+}
+
+#inputs li {
+  padding: 0.611em; /* 11 / 18 = 0.6111; (22 - 13) = 9 / 18 = 0.5 */
+  margin-bottom: 0.611em; /* 11 / 18 = 0.6111 */
+  border-radius: 0.2em;
+}
+#inputs .submit {
+  padding-right: 0;
+  background: inherit;
+}
+
+a,
+input {
+  color: #37ced0;
+}
+
+input::placeholder {
+  color: #37ced0;
+  opacity: 0.7;
+}
+
+input[type="submit"] {
+  background: #37ced0;
+  color: #222;
+}
+
+#inputs li {
+  /* border: 1px solid #444; */
+  background: #3F3F3F;
+}
+
+#inputs .submit {
+  border: 0;
+}
+
+label b {
+  color: red;
+}
+
+#submit:hover {
+  color: white;
+  background-color: purple;
   cursor: pointer;
 }
-.js body {
-  padding-top: 3.667em; /* 66 / 18 = 3.667... */
+/*.js img {
+  cursor: pointer;
 }
+
+.js body {
+  padding-top: 3.667em;
+}
+
 .js body:after {
   content: "expanded-nav";
   display: none;
 }
+
 .js body.is-showing-expanded-nav {
-  padding-top: 30em; /* 286px / 18px = 15.88... */
+  padding-top: 30em;  286px / 18px = 15.88...
 }
+
 .js #menu {
   line-height: inherit;
   padding-bottom: 0;
 }
+
 .js #navigation ul {
   display: none;
 }
+
 .js #navigation ul.is-visible {
   display: block;
-}
+} */

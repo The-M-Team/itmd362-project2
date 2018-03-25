@@ -16,13 +16,13 @@
           <ul>
             <li><a href="../">Home</a></li>
             <li><a href="../movies/">Movies</a></li>
-            <li><a href="../theaters/">Theaters nearby</a></li>
+            <li><a href="../theaters/">Theaters</a></li>
           </ul>
         </nav>
       </header>
       <main id="main-content">
         <form id="location" method="get" action="#null">
-         <ol class="inputs">
+         <ol id="inputs">
            <li>
              <label for="zip">ZIP Code</label>
              <input name="zip" id="zip" type="text" pattern="[0-9]*" />
@@ -36,7 +36,7 @@
              <input name="state" id="state" type="text" />
            </li>
          </ol>
-           <input type="submit" name="submit" value="Check Nearby Theaters" />
+           <input type="submit" id="submit" name="submit" value="Check Nearby Theaters" />
        </form>
       </main>
       <footer id="footer">

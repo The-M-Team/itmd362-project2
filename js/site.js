@@ -5,9 +5,69 @@
 /* eslint-enable */
 
 $('html').removeClass('no-js').addClass('js');
+$.noConflict();
+
+(function($) {
+  "use strict";
+  var slideshow = (function () {
+    var counter = 0,
+      i,
+      j,
+      slides =  $("#slideshow .slide"),
+      slidesLen = slides.length - 1;
+    for (i = 0, j = 9999; i < slides.length; i += 1, j -= 1) {
+      $(slides[i]).css("z-index", j);
+    }
+    return {
+      startSlideshow: function () {
+        window.setInterval(function () {
+          if (counter === 0) {
+            slides.eq(counter).fadeOut();
+            counter += 1;
+          } else if (counter === slidesLen) {
+            counter = 0;
+            slides.eq(counter).fadeIn(function () {
+              slides.fadeIn();
+            });
+          } else {
+            slides.eq(counter).fadeOut();
+            counter += 1;
+          }
+        }, 2500);
+      }
+    };
+  }());
+  slideshow.startSlideshow();
+
+  $('#inputs li').on('click', function() {
+    $(this).find('input').focus();
+  });
+
+  $('#zip').on('keyup', function(e) {
+  // On a keyup event, ...
+  var zip = $(this).val();
+  if (zip.length === 5) {
+    $('label b').remove();
+    $.ajax({
+      url: 'http://api.zippopotam.us/us/' + zip,
+      statusCode: {
+        200: function(data) {
+          $('#city').val(data.places[0]["place name"]);
+          $('#state').val(data.places[0]["state abbreviation"]);
+        },
+        404: function() {
+          $('label[for="zip"]').append(' <b>Please enter a valid zip code</b>');
+        }
+      }
+    }
+    );
+  }
+});
+
+})(jQuery);
 
 // Run toggledNavigation function on load and resize events:
-$(document).ready(toggledNavigation());
+/* $(document).ready(toggledNavigation());
 $(window).on('resize', toggledNavigation());
 
 function toggledNavigation() {
@@ -36,4 +96,4 @@ function responsiveFeature(feature) {
     has_feature = false;
   }
   return has_feature;
-}
+} */
