@@ -276,6 +276,19 @@ img {
 
 }
 
+.slide1 {
+  padding-top: 50em;
+  max-width: 15em;
+  max-height: 15em;
+}
+.slide2,
+.slide3,
+.slide4 {
+  padding-top: 10em;
+  max-width: 15em;
+  max-height: 15em;
+}
+
 .slide {
   position: absolute;
 }
