@@ -289,7 +289,6 @@ figure h2 {
   color: #222;
 }
 
-
 label,
 input {
   display: block;
@@ -356,10 +355,11 @@ label b {
   color: red;
 }
 
-#submit:hover {
+#purchase-button:hover {
   color: white;
   background-color: purple;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 /*.js img {
   cursor: pointer;
