@@ -64,6 +64,14 @@ $.noConflict();
   }
 });
 
+$(document).ready(function() {
+  $('#purchase-form').hide();
+  $("#purchase-button").click(function(){
+    $("#purchase-button").hide();
+    $("#purchase-form").show();
+  });
+});
+
 })(jQuery);
 
 // Run toggledNavigation function on load and resize events:
