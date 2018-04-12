@@ -6,6 +6,14 @@
 
 $('html').removeClass('no-js').addClass('js');
 
+$(document).ready(function(){
+  $("#purchase-form").hide();
+  $("#purchase-button").click(function(){
+    $("#purchase-button").hide();
+    $("#purchase-form").show();
+  });
+});
+
 $('#inputs li').on('click', function() {
   $(this).find('input').focus();
 });
@@ -20,3 +28,34 @@ $('.seats a').on('click', function(e) {
    selected.push(seat);
     });
 });
+
+jQuery(function($) {
+  // Define veriables
+  var show = {
+    name: null,
+    date: null,
+    time: null
+  };
+});
+
+  $(".show").click(function() {
+    var log = $.trim($(this).text());
+    var showClick = {
+      raw: log.split("\n")
+    };
+    show.name = showClick.raw[0];
+    show.date = $.trim(eventClick.raw[3]);
+    var url = window.location.href.replace(/\/$/, '');
+    var lastSeg = url.substr(url.lastIndexOf('#') + 1);
+    show.time = url
+
+    Cookies.set('movie', show.name);
+    Cookies.set('Date', show.date);
+    Cookies.set('time', show.time);
+
+    $(this).attr('href', 'seats');
+  });
+
+  $('.ticket-info').append('<li>' + Cookies.get('movie') + '</li>');
+  $('.ticket-info').append('<li class="padding">' + Cookies.get('date') + '</li>');
+  $('.ticket-info').append('<li>' + Cookies.get('time') + '</li>');
