@@ -5,10 +5,18 @@
 /* eslint-enable */
 
 $('html').removeClass('no-js').addClass('js');
-$.noConflict();
 
-  $('#inputs li').on('click', function() {
-    $(this).find('input').focus();
-  });
+$('#inputs li').on('click', function() {
+  $(this).find('input').focus();
+});
 
-})(jQuery);
+$('.seats a').on('click', function(e) {
+  var selected = [];
+  var seats;
+  e.preventDefault();
+  $(this).toggleClass('selected');
+  $('.selected','.rows').each(function(){
+   var seat = $(this).attr('href').substring(1);
+   selected.push(seat);
+    });
+});

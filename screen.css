@@ -244,6 +244,22 @@ img {
 #footer {
   padding-top: 5%;
 }
+
+figure {
+  width: 70%;
+  margin: 0 auto;
+}
+
+figure h2 {
+  display: block;
+  height: 1em;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-top: 0.75rem;
+  background: #333;
+  text-align: center;
+}
+
 .row h3 {
   left: -100vw;
   position: absolute;
@@ -256,7 +272,8 @@ img {
   justify-content: center;
 }
 .seats a {
-  background: green;
+  background: grey;
+  color: white;
   display: block;
   line-height: 1;
   margin-right: 0.611em; /* 11 / 18 = 0.6111 */
@@ -267,28 +284,11 @@ img {
   text-decoration: none;
 }
 
-/* #slideshow {
-  margin: auto;
-  position: relative;
-
+.seats a.selected {
+  background: rgba(55,206,208,1); /* #37ced0 */
+  color: #222;
 }
 
-.slide1 {
-  padding-top: 50em;
-  max-width: 15em;
-  max-height: 15em;
-}
-.slide2,
-.slide3,
-.slide4 {
-  padding-top: 10em;
-  max-width: 15em;
-  max-height: 15em;
-}
-
-.slide {
-  position: absolute;
-} */
 
 label,
 input {
