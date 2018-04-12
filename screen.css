@@ -269,7 +269,28 @@ img {
 #footer {
   padding-top: 5%;
 }
-
+.row h3 {
+  left: -100vw;
+  position: absolute;
+}
+.rows {
+  padding-top: 0.611em; /* 11 / 18 = 0.6111 */
+}
+.seats {
+  display: flex;
+  justify-content: center;
+}
+.seats a {
+  background: green;
+  display: block;
+  line-height: 1;
+  margin-right: 0.611em; /* 11 / 18 = 0.6111 */
+  margin-bottom: 0.611em; /* 11 / 18 = 0.6111 */
+  padding: 0.722em 0; /* 13 / 18 = 0.722 */
+  width: 44px;
+  text-align: center;
+  text-decoration: none;
+}
 #slideshow {
   margin: auto;
   position: relative;
