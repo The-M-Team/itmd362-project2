@@ -60,38 +60,3 @@ jQuery(function($) {
   $('.ticket-info').append('<li>' + Cookies.get('movie') + '</li>');
   $('.ticket-info').append('<li class="padding">' + Cookies.get('date') + '</li>');
   $('.ticket-info').append('<li>' + Cookies.get('time') + '</li>');
-
-  var creditCard = {
-      name: null,
-      number: null,
-      exp: null,
-      zip: null,
-      cvv: null
-    };
-
-  $('#input .submit').on('click',function formValidation() {
-    if (creditCard.name === null) {
-      console.log('Credit-Card Name is empty');
-      $('#invalid').remove();
-      $('#emailadd').append('<li id="invalid">Please enter a name for the card</li>');
-    }
-    if (creditCard.number === null) {
-      console.log('Credit-Card Nunmber is empty');
-      $('#invalid').remove();
-      $('#emailadd').append('<li id="invalid">Please enter a Number for the card</li>');
-    }
-    if (creditCard.exp === null) {
-      console.log('Credit-Card Expiration date is empty');
-      $('#invalid').remove();
-      $('#emailadd').append('<li id="invalid">Please enter a Expiry Date for the card</li>');
-    }
-    if (creditCard.zip === null) {
-      console.log('Credit-Card Zip code is empty');
-      $('#invalid').remove();
-      $('#emailadd').append('<li id="invalid">Please enter a Zip code for the card</li>');
-    }
-    if (creditCard.cvv === null) {
-      console.log('Credit-Card CVV is empty');
-      $('#invalid').remove();
-      $('#emailadd').append('<li id="invalid">Please enter a CVV for the card</li>');
-    });
