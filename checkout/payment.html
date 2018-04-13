@@ -17,19 +17,20 @@
           <li><a href="../seating/seats">seats</a></li>
         </ul>
       </aside>
+      <aside id="signup">
       <form method="get" action="null" id="form">
         <ol id="inputs">
           <li id="input-cardname">
             <label for="cardname">Cardholder Name</label>
-            <input id="cardname" name="cardname" type="text" />
+            <input id="cardname" name="name" type="text" placeholder="John doe" />
           </li>
           <li id="input-cardnumber">
             <label for="cardnumber">Card Number</label>
-            <input id="cardnumber" name="cardnumber" type="tel" />
+            <input id="cardnumber" name="cardnumber" type="tel" placeholder="xxxx-xxxx-xxxx-xxxx" />
           </li>
           <li id="input-expdate">
             <label for="expdate">Expiration Date</label>
-            <input id="expdate" name="expdate" type="tel" />
+            <input id="expdate" name="expdate" type="date" />
           </li>
           <li id="input-billzip">
             <label for="billzip">Billing Zip Code</label>
@@ -37,11 +38,12 @@
           </li>
           <li id="input-cvv">
             <label for="cvv">CVV</label>
-            <input id ="cvv" name="cvv" type="tel" pattern="[0-9]*"/>
+            <input id="cvv" name="cvv" type="tel" pattern="[0-9]*"/>
           </li>
         </ol>
           <input type="submit" id="final-submit" value="Purchase tickets" />
       </form>
+    </aside>
     </main>
     <footer id="footer">
       <p>&copy; Copyright (c) 2018 Copyright Holder All Rights Reserved.</p>
