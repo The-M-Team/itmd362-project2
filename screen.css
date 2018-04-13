@@ -308,7 +308,7 @@ input {
 
 input[type="submit"] {
   cursor: pointer;
-  background: #CCC;
+  background: grey;
   padding: 0.611em; /* 11 / 18 = 0.6111; (22 - 13) = 9 / 18 = 0.5 */
   border-radius: 0.2em;
   float: right;
@@ -340,8 +340,8 @@ input[type="submit"] {
 }
 
 #inputs li {
-  /* border: 1px solid #444; */
-  background: #3F3F3F;
+  border: 1px solid #444;
+  background: grey;
 }
 
 #inputs .submit {
@@ -353,8 +353,23 @@ label b {
 }
 
 #purchase-button:hover {
+  float: right;
   color: white;
   background-color: purple;
   cursor: pointer;
   margin-bottom: 2rem;
+}
+
+#submit:hover {
+  float: right;
+  color: white;
+  background-color: purple;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+aside #nav {
+  display: inline-block;
+  padding-bottom: 1rem;
+  text-decoration: none;
 }
