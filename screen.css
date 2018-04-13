@@ -269,8 +269,8 @@ figure h2 {
   justify-content: center;
 }
 .seats a {
-  background: grey;
-  color: white;
+  background: #DAF7A6;
+  color: black;
   display: block;
   line-height: 1;
   margin-right: 0.611em; /* 11 / 18 = 0.6111 */
@@ -282,8 +282,14 @@ figure h2 {
 }
 
 .seats a.selected {
-  background: rgba(55,206,208,1); /* #37ced0 */
-  color: #222;
+  background: #B3123E;
+  color: white;
+}
+
+.seats a.unavailable {
+  color: #666;
+  background: #333;
+  cursor: default;
 }
 
 label,
@@ -326,17 +332,17 @@ input[type="submit"] {
 
 a,
 input {
-  color: #37ced0;
+  color: #B3123E;
 }
 
 input::placeholder {
-  color: #37ced0;
+  color: #B3123E;
   opacity: 0.7;
 }
 
 input[type="submit"] {
-  background: #37ced0;
-  color: #222;
+  background: #B3123E;
+  color: white;
 }
 
 #inputs li {
