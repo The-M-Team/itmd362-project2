@@ -381,12 +381,21 @@ aside .nav {
   text-decoration: none;
 }
 
+#submitted {
+  box-sizing: border-box;
+  background: #494848;
+  border: 0;
+  border-radius: 0.2em;
+  padding: 0.516em; /* 22 / 42.635 = 0.516 */
+  font-size: 2.4444em;
+  color: #B3123E;
+}
+
 @media screen and (min-width: 375px) {
 
   body {
     padding-right: 11.2%; /* 42 / 375 = 11.2% */
     padding-left: 11.2%; /* 42 / 375 = 11.2% */
-
   }
 }
 
@@ -396,10 +405,5 @@ aside .nav {
     padding-right: 6.56%; /* 42 / 640 = 6.56% */
     padding-left: 6.56%; /* 42 / 640 = 6.56% */
   }
-
-}
-
-@media screen and (min-width: 860px) {
-
 
 }

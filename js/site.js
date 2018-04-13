@@ -11,6 +11,12 @@ $('#inputs li').on('click', function() {
   $(this).find('input').focus();
 });
 
+$('#form').on('submit', function(e) {
+  var name = $('#cardname').val();
+  e.preventDefault();
+  $('#form').replaceWith('<h1 id="submitted"> Thank you ' + name + '!  your purchase has been completed, please check your email shortly.</h1>');
+  });
+
 $('.seats a').on('click', function(e) {
   var selected = [];
   var seats;
@@ -28,4 +34,5 @@ $('.seats a').on('click', function(e) {
   total = selected.length * 15;
   $('#total').append('$' + total);
   docCookies.setItem('total',total);
+
 });
