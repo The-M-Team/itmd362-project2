@@ -9,7 +9,7 @@
 </head>
 <body>
   <main id="primary">
-    <aside id="nav">
+    <aside class="nav">
       <ul>
         <li>Return to:</li>
         <li><a href="../">Home</a></li>
@@ -155,10 +155,17 @@
         </li>
       </ol>
     </figure>
-    <form id="purchase" action="../checkout/payment.html">
+    <form id="checkout" action="../checkout/payment">
       <ol>
         <li>
-          <input type="submit" value="Purchase Ticket" id="purchase-button"/>
+          <label for="seats">Selected Seats:</label>
+          <input name="seats" id="seats" type="text" placeholder="b2,b3"/>
+        </li>
+        <li>
+          <p class="total">Total: <span id="total"></span></p>
+        </li>
+        <li>
+          <input type="submit" value="Checkout" id="purchase-button"/>
         </li>
       </ol>
     </form>

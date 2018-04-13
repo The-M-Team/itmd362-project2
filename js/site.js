@@ -7,14 +7,6 @@ var docCookies={getItem:function(e){return e?decodeURIComponent(document.cookie.
 
 $('html').removeClass('no-js').addClass('js');
 
-$(document).ready(function(){
-  $("#purchase-form").hide();
-  $("#purchase-button").click(function(){
-    $("#purchase-button").hide();
-    $("#purchase-form").show();
-  });
-});
-
 $('#inputs li').on('click', function() {
   $(this).find('input').focus();
 });
@@ -22,41 +14,18 @@ $('#inputs li').on('click', function() {
 $('.seats a').on('click', function(e) {
   var selected = [];
   var seats;
+  var total = 0;
   e.preventDefault();
   $(this).toggleClass('selected');
-  $('.selected','.rows').each(function(){
-   var seat = $(this).attr('href').substring(1);
-   selected.push(seat);
-    });
-});
-
-jQuery(function($) {
-  // Define veriables
-  var show = {
-    name: null,
-    date: null,
-    time: null
-  };
-});
-
-  $(".show").click(function() {
-    var log = $.trim($(this).text());
-    var showClick = {
-      raw: log.split("\n")
-    };
-    show.name = showClick.raw[0];
-    show.date = $.trim(eventClick.raw[3]);
-    var url = window.location.href.replace(/\/$/, '');
-    var lastSeg = url.substr(url.lastIndexOf('#') + 1);
-    show.time = url
-
-    Cookies.set('movie', show.name);
-    Cookies.set('Date', show.date);
-    Cookies.set('time', show.time);
-
-    $(this).attr('href', 'seats');
+  $('.selected', '.rows').each(function(){
+    var seat = $(this).attr('href').substring(1);
+    selected.push(seat);
   });
-
-  $('.ticket-info').append('<li>' + Cookies.get('movie') + '</li>');
-  $('.ticket-info').append('<li class="padding">' + Cookies.get('date') + '</li>');
-  $('.ticket-info').append('<li>' + Cookies.get('time') + '</li>');
+  seats = selected.join(",");
+  $('#seats').val(seats);
+  docCookies.setItem('seats',seats);
+  $('#total').empty();
+  total = selected.length * 15;
+  $('#total').append('$' + total);
+  docCookies.setItem('total',total);
+});

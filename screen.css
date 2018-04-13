@@ -375,7 +375,7 @@ label b {
   margin-bottom: 2rem;
 }
 
-aside #nav {
+aside .nav {
   display: inline-block;
   padding-bottom: 1rem;
   text-decoration: none;
