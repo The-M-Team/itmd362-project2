@@ -15,7 +15,7 @@ $('#form').on('submit', function(e) {
   var name = $('#cardname').val();
   e.preventDefault();
   $('#form').replaceWith('<h1 id="submitted"> Thank you ' + name + '!  your purchase has been completed, please check your email shortly.</h1>');
-  });
+});
 
 $('.seats a').on('click', function(e) {
   var selected = [];
@@ -29,10 +29,10 @@ $('.seats a').on('click', function(e) {
   });
   seats = selected.join(",");
   $('#seats').val(seats);
-  docCookies.setItem('seats',seats);
+  docCookies.setItem('seats', seats);
   $('#total').empty();
   total = selected.length * 15;
   $('#total').append('$' + total);
-  docCookies.setItem('total',total);
+  docCookies.setItem('total', total);
 
 });
