@@ -153,10 +153,31 @@
       <input type="button" value="Purchase Tickets" id="purchase-button"/>
       <ol class="ticket-info">
       </ol>
-      <ol id="purchase-form">
-        <li>Purchase form here</li>
-        <li></li>
-      </ol>
+      <ul id="purchase-form">
+          <li id="input-cardname">
+            <label for="cardname">Cardholder Name</label>
+            <input id="cardname" name="cardname" type="text" />
+          </li>
+          <li id="input-cardnumber">
+            <label for="cardnumber">Card Number</label>
+            <input id="cardnumber" name="cardnumber" type="text" />
+          </li>
+          <li id="input-expdate">
+            <label for="expdate">Expiration Date</label>
+            <input id="expdate" name="expdate" type="text" />
+          </li>
+          <li id="input-billzip">
+            <label for="billzip">Billing Zip Code</label>
+            <input id="billzip" name="billzip" type="text" pattern="[0-9]*" />
+          </li>
+          <li id="CVV">
+            <label for="CVV">CVV</label>
+            <input id ="CVV" name="CVV" type="text" pattern="[0-9]*"/>
+          </li>
+          <li class="submit-button">
+            <input type="submit" id="submit" value="Order Now" />
+          </li>
+        </ul>
     </form>
   </main>
   <footer id="footer">
