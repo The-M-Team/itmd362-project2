@@ -20,6 +20,10 @@
       <aside id="signup">
       <form method="get" action="null" id="form">
         <ol id="inputs">
+          <li id="emailadd">
+            <label for="email">Email</label>
+            <input placeholder="you@example.com" type="email" id="email" name="email" />
+          </li>
           <li id="input-cardname">
             <label for="cardname">Cardholder Name</label>
             <input id="cardname" name="name" type="text" placeholder="John doe" />
@@ -34,11 +38,11 @@
           </li>
           <li id="input-billzip">
             <label for="billzip">Billing Zip Code</label>
-            <input id="billzip" name="billzip" type="tel" pattern="[0-9]*" />
+            <input id="billzip" name="billzip" type="text" pattern="[0-9]*" />
           </li>
           <li id="input-cvv">
             <label for="cvv">CVV</label>
-            <input id="cvv" name="cvv" type="tel" pattern="[0-9]*"/>
+            <input id="cvv" name="cvv" type="text" pattern="[0-9]*"/>
           </li>
         </ol>
           <input type="submit" id="final-submit" value="Purchase tickets" />

@@ -200,6 +200,11 @@ h1 {
   line-height: 1.032em; /* 44 / 42.635 = 1.032 */
   padding-bottom: 0.516em; /* 22 / 42.635 = 0.516 */
   text-align: center;
+  font-family: 'Viga', sans-serif;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
 }
 
 #welcome {
@@ -249,10 +254,6 @@ img {
 a,
 input {
   color: #B3123E;
-}
-
-#main-content a {
-  color: #DAF7A6;
 }
 
 .seating-chart {
@@ -376,6 +377,10 @@ aside .nav {
   text-decoration: none;
 }
 
+#main-content a {
+  color: #DAF7A6;
+}
+
 #submitted {
   box-sizing: border-box;
   background: #494848;
@@ -401,4 +406,25 @@ aside .nav {
     padding-left: 6.56%; /* 42 / 640 = 6.56% */
   }
 
+}
+
+@media screen and (min-width: 860px) {
+
+  #content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+  }
+
+  #firstposters {
+    grid-column: 1;
+    padding-top: 2.444em;
+    margin-left: 10em;
+  }
+
+  #secondpsoters {
+    grid-column: 2/4;
+    padding-top: 2.444em;
+    margin-left: 10em;
+  }
 }
