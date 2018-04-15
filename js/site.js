@@ -13,8 +13,50 @@ $('#inputs li').on('click', function() {
 
 $('#form').on('submit', function(e) {
   var name = $('#cardname').val();
+  var number = $('#cardnumber').val();
+  var date = $('#expdate').val();
+  var zip = $('#billzip').val();
+  var cvv = $('#cvv').val();
+  var email = {
+    val: $('#email').val(),
+    pattern: /^[^\s@]+@[^\s@]+$/
+  };
   e.preventDefault();
-  $('#form').replaceWith('<h1 id="submitted"> Thank you ' + name + '!  your purchase has been completed, please check your email shortly.</h1>');
+  if (email.val === '') {
+    console.log('email is empty');
+    $('#invalid').remove();
+    $('#emailadd').append('<b id="invalid">Please enter an email</b>');
+  }
+  else if (!(email.pattern).test(email.val)) {
+    console.log('invalid email');
+    $('#invalid').remove();
+    $('#emailadd').append('<b id="invalid">Please enter a valid email</b>');
+  }
+  else if (name === '') {
+    console.log('empty');
+    $('#invalid').remove();
+    $('#input-cardname').append('<b id="invalid">Please enter name on card</b>');
+  }
+  else if (number === '') {
+    $('#invalid').remove();
+    $('#input-cardnumber').append('<b id="invalid">Please enter the card number</b>');
+  }
+  else if (date === '') {
+    $('#invalid').remove();
+    $('#input-expdate').append('<b id="invalid">Please enter the expiration date</b>');
+  }
+  else if (zip === '') {
+    $('#invalid').remove();
+    $('#input-billzip').append('<b id="invalid">Please enter a zip code</b>');
+  }
+  else if (cvv === '') {
+    $('#invalid').remove();
+    $('#input-cvv').append('<b id="invalid">Please enter the cvv number</b>');
+  }
+  else {
+    $(this).remove();
+    $('#signup').replaceWith('<h1 id="submitted"> Thank you ' + name + '!  your purchase has been completed, please check your email shortly.</h1>');
+  }
 });
 
 $('.seats a').on('click', function(e) {
