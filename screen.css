@@ -256,10 +256,6 @@ input {
   color: #B3123E;
 }
 
-#main-content a {
-  color: #DAF7A6;
-}
-
 .seating-chart {
   width: 70%;
   margin: 0 auto;
@@ -381,6 +377,10 @@ aside .nav {
   text-decoration: none;
 }
 
+#main-content a {
+  color: #DAF7A6;
+}
+
 #submitted {
   box-sizing: border-box;
   background: #494848;
@@ -406,4 +406,25 @@ aside .nav {
     padding-left: 6.56%; /* 42 / 640 = 6.56% */
   }
 
+}
+
+@media screen and (min-width: 860px) {
+
+  #content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+  }
+
+  #firstposters {
+    grid-column: 1;
+    padding-top: 2.444em;
+    margin-left: 10em;
+  }
+
+  #secondpsoters {
+    grid-column: 2/4;
+    padding-top: 2.444em;
+    margin-left: 10em;
+  }
 }
